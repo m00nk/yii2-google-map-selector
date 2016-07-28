@@ -157,7 +157,7 @@ var googleMapSelector = {
 			googleMapSelector._placeMarker(e.latLng);
 		});
 
-		// при ручном изменении данных адреса убиваем координаты, т.к. они уже не будут соответствовать адресу
+		// при ручном изменении данных адреса убиваем координаты и полный адрес, т.к. они уже не будут соответствовать измененному вручную адресу
 		$(googleMapSelector.inputState)
 			.add(googleMapSelector.inputFullAddress)
 			.add(googleMapSelector.inputCountry)
@@ -168,6 +168,7 @@ var googleMapSelector = {
 			{
 				googleMapSelector.inputLatitude.val('');
 				googleMapSelector.inputLongitude.val('');
+				googleMapSelector.inputFullAddress.val('');
 			})
 	},
 
