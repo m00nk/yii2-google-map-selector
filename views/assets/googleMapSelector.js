@@ -59,6 +59,13 @@ var googleMapSelector = {
 		googleMapSelector.inputState = $(googleMapSelector.s.stateInputSelector);
 		googleMapSelector.inputFullAddress = $(googleMapSelector.s.fullAddressInputSelector);
 
+		// блокируем отправку родительской формы по нажатию Enter в выпадающем меню результатов поиска гугла.
+		$(googleMapSelector.s.searchFieldSelector).bind('keydown', function(e){
+			if(e.which == 13 /* ENTER */)
+				e.preventDefault();
+			return true;
+		});
+
 		if(typeof google == 'undefined')
 		{
 			var st = document.createElement('script');
