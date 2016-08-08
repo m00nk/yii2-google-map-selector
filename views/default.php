@@ -39,6 +39,7 @@ $this->registerJs('googleMapSelector.init('.Json::encode([
 
 		'defaultLatitude' => $widget->defaultLatitude,
 		'defaultLongitude' => $widget->defaultLongitude,
+		'defaultZoom' => $widget->defaultZoom,
 
 		'latitudeInputSelector' => $widget->latitudeSelector,
 		'longitudeInputSelector' => $widget->longitudeSelector,

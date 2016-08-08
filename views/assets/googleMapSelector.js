@@ -10,6 +10,7 @@ var googleMapSelector = {
 
 		defaultLatitude: 0,
 		defaultLongitude: 0,
+		defaultZoom : 16,
 
 		latitudeInputSelector: '',
 		longitudeInputSelector: '',
@@ -105,7 +106,7 @@ var googleMapSelector = {
 
 		googleMapSelector.map = new google.maps.Map($(googleMapSelector.s.mapDivSelector)[0], {
 			center: initLatLng,
-			zoom: initPosition ? 17 : 12,
+			zoom: googleMapSelector.s.defaultZoom,
 			mapTypeId: google.maps.MapTypeId.ROADMAP,
 			panControl: true,
 
@@ -135,7 +136,7 @@ var googleMapSelector = {
 				var bounds = item.geometry.viewport ? item.geometry.viewport : item.geometry.bounds;
 				var center = null;
 
-				googleMapSelector.map.setZoom(17);
+				googleMapSelector.map.setZoom(googleMapSelector.s.defaultZoom);
 
 				if(item.geometry.location)
 				{

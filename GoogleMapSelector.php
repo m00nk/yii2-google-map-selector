@@ -19,6 +19,9 @@ class GoogleMapSelector extends Widget
 	/** @var float дефолтовая долгота */
 	public $defaultLongitude = -122.763;
 
+	/** @var int дефолтовое значение зума */
+	public $defaultZoom = 16;
+
 	/** @var string jQuery-селектор поля широты */
 	public $latitudeSelector;
 
